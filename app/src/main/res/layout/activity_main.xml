@@ -6,13 +6,100 @@
     android:layout_height="match_parent"
     tools:context="com.example.aluno.likbook_app.MainActivity">
 
-    <TextView
+    <ImageButton
+        android:id="@+id/btBio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/iconebio"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <ImageButton
+        android:id="@+id/cam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconecamera"
+        tools:layout_editor_absoluteX="312dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageButton
+        android:id="@+id/btInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconecurso"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <ImageButton
+        android:id="@+id/btFia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconefilos"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <ImageButton
+        android:id="@+id/btFisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconefisica"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <ImageButton
+        android:id="@+id/btGeo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconeglobo"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <ImageButton
+        android:id="@+id/btHist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconehist"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="275dp" />
+
+    <ImageButton
+        android:id="@+id/btIngles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconeingles"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <ImageButton
+        android:id="@+id/btPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconeport"
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <ImageButton
+        android:id="@+id/btQuim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconequim"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <ImageButton
+        android:id="@+id/btSocio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconesocio"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="275dp" />
+
+    <ImageButton
+        android:id="@+id/btMat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconemat"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="275dp" />
 
 </android.support.constraint.ConstraintLayout>
