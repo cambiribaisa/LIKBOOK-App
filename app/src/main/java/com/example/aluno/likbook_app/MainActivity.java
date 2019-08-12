@@ -1,9 +1,9 @@
 package com.example.aluno.likbook_app;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this, new String[](Manifest.permission.CAMERA), 0);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 0);
         }
 
         foto = (ImageView)  findViewById(R.id.imageViewFoto);
@@ -48,9 +48,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onActivit  {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-    }
+        if(requestCode == 1 && requestCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imagem = (Bitmap) extras.get("data");
+            foto.setImageBitmap(imagem);
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+
     }
 
 
