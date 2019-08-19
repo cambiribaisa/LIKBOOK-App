@@ -15,6 +15,19 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ImageButton btgeo;
+    private ImageButton btFisi;
+    private ImageButton btPort;
+    private ImageButton btMat;
+    private ImageButton btHist;
+    private ImageButton btIngles;
+    private ImageButton btSoc;
+    private ImageButton btFia;
+    private ImageButton btInfo;
+    private ImageButton btBio;
+    private ImageButton btQuim;
+
+
     private ImageButton camera;
     private ImageView foto;
 
@@ -38,6 +51,30 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+
+        btgeo = (ImageButton)  findViewById(R.id.btGeo);
+        findViewById(R.id.btGeo).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+
+                //abrir tela geografia
+
+
+
+
+            }
+
+        });
+
+
+
+
+
+
+
 
     }
 
