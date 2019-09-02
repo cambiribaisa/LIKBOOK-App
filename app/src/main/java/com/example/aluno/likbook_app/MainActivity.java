@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,29 +29,12 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btQuim;
 
 
-    private ImageButton camera;
-    private ImageView foto;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 0);
-        }
-
-        foto = (ImageView)  findViewById(R.id.imageViewFoto);
-        findViewById(R.id.buttonCamera).setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                tirarFoto();
-
-            }
-
-        });
 
 
         btgeo = (ImageButton)  findViewById(R.id.btGeo);
@@ -59,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
+                startActivity(new Intent(MainActivity.this, GeoActivity.class));
                 //abrir tela geografia
 
 
@@ -69,32 +53,26 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        btFisi = (ImageButton)  findViewById(R.id.btFisi);
+        findViewById(R.id.btFisi).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, FisicaActivity.class));
+                //abrir tela geografia
 
 
 
 
+            }
 
-
-
-    }
-
-    public void tirarFoto() {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intent, 1);
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        if(requestCode == 1 && requestCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imagem = (Bitmap) extras.get("data");
-            foto.setImageBitmap(imagem);
-        }
-        super.onActivityResult(requestCode, resultCode, data);
+        });
 
     }
+
+
+
 
 
 //https://www.youtube.com/watch?v=1oyvdqc_QZg
