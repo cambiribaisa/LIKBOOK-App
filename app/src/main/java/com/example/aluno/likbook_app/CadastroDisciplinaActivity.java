@@ -1,6 +1,5 @@
 package com.example.aluno.likbook_app;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,16 +11,16 @@ import com.orm.SchemaGenerator;
 import com.orm.SugarContext;
 import com.orm.SugarDb;
 
-public class CadastroPessoaActivity extends AppCompatActivity {
+public class CadastroDisciplinaActivity extends AppCompatActivity {
 
     private EditText nome;
-    private EditText email;
+    private EditText descricao;
     private Button save;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro_pessoa);
+        setContentView(R.layout.activity_cadastro_disciplina);
 
         SugarContext.init(getApplicationContext());
         SchemaGenerator schemaGenerator = new SchemaGenerator(this);
@@ -29,23 +28,24 @@ public class CadastroPessoaActivity extends AppCompatActivity {
 
         save = (Button) findViewById(R.id.save);
         nome = (EditText) findViewById(R.id.nome);
-        email = (EditText) findViewById(R.id.email);
+        descricao = (EditText) findViewById(R.id.descricao);
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(CadastroPessoaActivity.this, "Salvando Pessoa!", Toast.LENGTH_SHORT).show();
-                String n = nome.getText().toString();
-                String e = nome.getText().toString();
 
-                Pessoa p = new Pessoa;
+                String n = nome.getText().toString();
+                String e = descricao.getText().toString();
+
+                Disciplina p = new Disciplina();
                 p.setNome(n);
-                p.setEmail(e);
+                p.setDescricao(e);
 
                 p.save();
+                Toast.makeText(CadastroDisciplinaActivity.this, "Salvando Disicplina!", Toast.LENGTH_SHORT).show();
 
                 nome.setText("");
-                email.setText("");
+                descricao.setText("");
 
             }
         });
@@ -58,7 +58,7 @@ public class CadastroPessoaActivity extends AppCompatActivity {
             }
         });
 
-        email.setOnClickListener(new View.OnClickListener() {
+        descricao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

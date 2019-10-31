@@ -1,18 +1,11 @@
 package com.example.aluno.likbook_app;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -44,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         cad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CadastroPessoaActivity.class));
+                startActivity(new Intent(MainActivity.this, CadastroDisciplinaActivity.class));
 
             }
         });

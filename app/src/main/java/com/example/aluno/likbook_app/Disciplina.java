@@ -3,27 +3,27 @@ package com.example.aluno.likbook_app;
 import com.orm.SugarRecord;
 
 
-public class Pessoa extends SugarRecord{
+public class Disciplina extends SugarRecord{
 
     private String nome;
-    private String email;
+    private String descricao;
 
-    public Pessoa() {
+    public Disciplina() {
     }
 
     public String getNome() {
         return nome;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDescricao() {
+        return descricao;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }
