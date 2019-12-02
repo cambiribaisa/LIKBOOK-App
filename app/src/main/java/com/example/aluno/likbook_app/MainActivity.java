@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btQuim;
 
     private Button cad;
+    private Button list;
 
 
 
@@ -41,6 +42,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+        list = (Button) findViewById(R.id.list);
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Listar.class));
+
+            }
+        });
+
+
 
 
 

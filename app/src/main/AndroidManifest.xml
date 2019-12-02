@@ -36,6 +36,7 @@
         <activity android:name=".FisicaActivity" />
         <activity android:name=".PortActivity" />
         <activity android:name=".CadastroDisciplinaActivity" />
+        <activity android:name=".Listar"></activity>
     </application>
 
 </manifest>
