@@ -35,7 +35,7 @@
         <activity android:name=".GeoActivity" />
         <activity android:name=".FisicaActivity" />
         <activity android:name=".PortActivity" />
-        <activity android:name=".CadastroDisciplinaActivity"></activity>
+        <activity android:name=".CadastroDisciplinaActivity" />
     </application>
 
 </manifest>
